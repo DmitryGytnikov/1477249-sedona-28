@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header>
@@ -19,7 +20,7 @@
       </nav>
     </header>
     <main>
-      <h1>Sity of Sedona</h1><!--скрыть ч/з visually hidden -->
+      <h1 class="visually-hidden">Sity of Sedona</h1>
       <div>
         <img src="img/svg/intro-welcome.svg" width="457" height="351" alt="Надпись Welcome to Sedona">
       </div>
@@ -85,23 +86,24 @@
     </main>
     <footer>
       <section>
-        <h2>Телефон</h2><!--скрыть ч/з visually hidden -->
+        <h2 class="visually-hidden">Телефон</h2>
         <p>
           <a href="#">#visitsedona</a><br>
           <a href="tel:+74956660166">Тел: +7(495) 666-01-66</a>
         </p>
       </section>
       <section>
-        <h2>Ссылки на соцсети</h2><!--скрыть ч/з visually hidden -->
+        <h2 class="visually-hidden">Ссылки на соцсети</h2>
         <ul>
           <li>
-            <a href="blank.html" target="_blank">Твиттер</a>
+            <a class="visually-hidden" href="blank.html" target="_blank">Твиттер</a>
+            <!--скрыть ч/з visually hidden или добавить aria-label="Твиттер" - это для доступности + на hotels.html-->
           </li>
           <li>
-            <a href="blank.html" target="_blank">Фэйсбук</a>
+            <a class="visually-hidden" href="blank.html" target="_blank" >Фэйсбук</a>
           </li>
           <li>
-            <a href="blank.html" target="_blank">Ютуб</a>
+            <a class="visually-hidden" href="blank.html" target="_blank">Ютуб</a>
           </li>
         </ul>
       </section>

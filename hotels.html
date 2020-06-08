@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Гостиницы. HTML Academy: Седона. </title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header>
@@ -19,9 +20,9 @@
       </nav>
     </header>
     <main>
-        <h1>Sity of Sedona Гостиницы</h1><!--скрыть ч/з visually hidden -->
+        <h1 class="visually-hidden">Sity of Sedona Гостиницы</h1>
         <section>
-          <h2>Фильтр гостиниц</h2><!--скрыть ч/з visually hidden -->
+          <h2 class="visually-hidden">Фильтр гостиниц</h2>
           <!--Здесь будет форма фильтра-->
           <div>
             <h2>Найдено: 3</h2>
@@ -35,6 +36,7 @@
               <li>
                 <a href="">
                 <!--Треугольник вверх-->
+                <!--скрыть ч/з visually hidden или добавить aria-label="Треугольник вверх" - это для доступности-->
                 </a>
               </li>
               <li>
@@ -46,7 +48,7 @@
           </div>
         </section>
         <section>
-          <h2>Cписок гостиниц</h2><!--скрыть ч/з visually hidden -->
+          <h2 class="visually-hidden">Cписок гостиниц</h2>
           <ul>
             <li>
                 <p>
@@ -101,23 +103,23 @@
     </main>
     <footer>
       <section>
-        <h2>Телефон</h2><!--скрыть ч/з visually hidden -->
+        <h2 class="visually-hidden">Телефон</h2>
         <p>
           <a href="index.html">#visitsedona</a><br>
           <a href="tel:+74956660166">Тел: +7(495) 666-01-66</a>
         </p>
       </section>
       <section>
-        <h2>Ссылки на соцсети</h2><!--скрыть ч/з visually hidden -->
+        <h2 class="visually-hidden">Ссылки на соцсети</h2>
         <ul>
           <li>
-            <a href="blank.html" target="_blank">Твиттер</a>
+            <a class="visually-hidden" href="blank.html" target="_blank">Твиттер</a>
           </li>
           <li>
-            <a href="blank.html" target="_blank">Фэйсбук</a>
+            <a class="visually-hidden" href="blank.html" target="_blank">Фэйсбук</a>
           </li>
           <li>
-            <a href="blank.html" target="_blank">Ютуб</a>
+            <a class="visually-hidden" href="blank.html" target="_blank">Ютуб</a>
           </li>
         </ul>
       </section>
