@@ -20,7 +20,7 @@
       </nav>
     </header>
     <main>
-      <h1 class="visually-hidden">Sity of Sedona</h1>
+      <h1 class="visually-hidden">Городок Седона</h1>
       <div>
         <img src="img/svg/intro-welcome.svg" width="457" height="351" alt="Надпись Welcome to Sedona">
       </div>
@@ -79,7 +79,40 @@
         <p>Укажите предполагаемые даты поездки,<br>
          и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <button type="button">Поиск гостиницы в Седоне</button>
-        <!--Здесь будет форма поиска-->
+        <h3 class="visually-hidden"> Форма поиска гостиницы в Седоне</h3>
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <div><!--Почему-то с <p> выдает ошибку валидатор-->
+            <label for="date-come">Дата заезда:</label>
+            <div>
+              <input type="text" name="date-come" id="date-come" placeholder="24 апреля 2017">
+              <button type="button"><span class="visually-hidden">выбор даты на календаре</span></button>
+            </div>
+          </div>
+          <div>
+            <label for="date-ride">Дата выезда:</label>
+            <div>
+              <input type="text" name="date-ride" id="date-ride" placeholder="4 июля 2017">
+              <button type="button"><span class="visually-hidden">выбор даты на календаре</span></button>
+            </div>
+          </div>
+          <div>
+            <label for="quantity-adults">Взрослые:</label>
+            <div>
+              <button type="button"><span class="visually-hidden">Уменьшение значения на единицу</span></button>
+              <input type="text" name="quantity-adults" id="quantity-adults" value="2">
+              <button type="button"><span class="visually-hidden">Увеличение значения на единицу</span></button>
+            </div>
+          </div>
+          <div>
+            <label for="quantity-children">Дети:</label>
+            <div>
+              <button type="button"><span class="visually-hidden">Уменьшение значения на единицу</span></button>
+              <input type="text" name="quantity-children" id="quantity-children" value="0">
+              <button type="button"><span class="visually-hidden">Увеличение значения на единицу</span></button>
+            </div>
+          </div>
+          <button type="submit">Найти</button>
+        </form>
       </div>
       <img src="img/map.png" width="1200" height="594" alt="Блок карты">
       <!--Сделать карту интерактивной позднее-->
@@ -88,8 +121,8 @@
       <section>
         <h2 class="visually-hidden">Телефон</h2>
         <p>
-          <a aria-label="Перейти наверх страницы" href="#">#visitsedona</a><br>
-          <a href="tel:+74956660166">Тел: +7(495) 666-01-66</a>
+          <a aria-label="хештег" href="#">#visitsedona</a><br>
+          <a href="tel:+74956660166" aria-label="телефон">Тел: +7(495) 666-01-66</a>
         </p>
       </section>
       <section>
@@ -116,28 +149,5 @@
         </a>
       </p>
     </footer>
-    <section>
-      <h3 class="visually-hidden"> Форма поиска гостиницы в Седоне</h3>
-      <form action="https://echo.htmlacademy.ru" method="get">
-        <p>
-          <label for="date-come">Дата заезда:</label>
-          <input type="text" name="date-come" id="date-come" placeholder="24 апреля 2017">
-          <!--Как сделать ввод данных в поле при нажатии на иконку календаря?-->
-        </p>
-        <p>
-          <label for="date-ride">Дата выезда:</label>
-          <input type="text" name="date-ride" id="date-ride" placeholder="4 июля 2017">
-        </p>
-        <p>
-          <label for="quantity-adults">Взрослые:</label>
-          <input type="text" name="quantity-adults" id="quantity-adults" value="2"> <!-- Или использовать type="number"?  Как сделать + и - ?-->
-        </p>
-        <p>
-           <label for="quantity-children">Дети:</label>
-          <input type="text" name="quantity-children" id="quantity-children" value="0">
-        </p>
-        <button type="submit">Найти</button>
-      </form>
-    </section>
   </body>
 </html>
