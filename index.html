@@ -8,7 +8,7 @@
   <body>
     <header>
       <nav>
-        <a title="Вы уже на этой странице">
+        <a aria-label="Логотип Sity of Sedona" title="Вы уже на этой странице">
           <img src="img/svg/logo-sedona.svg" width="138" height="70" alt="Логотип Sity of Sedona">
         </a>
         <ul>
@@ -88,7 +88,7 @@
       <section>
         <h2 class="visually-hidden">Телефон</h2>
         <p>
-          <a href="#">#visitsedona</a><br>
+          <a aria-label="Перейти наверх страницы" href="#">#visitsedona</a><br>
           <a href="tel:+74956660166">Тел: +7(495) 666-01-66</a>
         </p>
       </section>
@@ -96,23 +96,48 @@
         <h2 class="visually-hidden">Ссылки на соцсети</h2>
         <ul>
           <li>
-            <a class="visually-hidden" href="blank.html" target="_blank">Твиттер</a>
-            <!--скрыть ч/з visually hidden или добавить aria-label="Твиттер" - это для доступности + на hotels.html-->
+            <a href="blank.html" target="_blank">
+              <span class="visually-hidden">Твиттер</span></a>
           </li>
           <li>
-            <a class="visually-hidden" href="blank.html" target="_blank" >Фэйсбук</a>
+            <a href="blank.html" target="_blank">
+              <span class="visually-hidden">Фэйсбук</span></a>
           </li>
           <li>
-            <a class="visually-hidden" href="blank.html" target="_blank">Ютуб</a>
+            <a href="blank.html" target="_blank">
+              <span class="visually-hidden">Ютуб</span></a>
           </li>
         </ul>
       </section>
       <p>
         Website by
-        <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
+        <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" aria-label="Перейти на сайт htmlacademy">
           <img src="img/svg/logo-htmlacademy.svg" width="115" height="41" alt="Логотип htmlacademy">
         </a>
       </p>
     </footer>
+    <section>
+      <h3 class="visually-hidden"> Форма поиска гостиницы в Седоне</h3>
+      <form action="https://echo.htmlacademy.ru" method="get">
+        <p>
+          <label for="date-come">Дата заезда:</label>
+          <input type="text" name="date-come" id="date-come" placeholder="24 апреля 2017">
+          <!--Как сделать ввод данных в поле при нажатии на иконку календаря?-->
+        </p>
+        <p>
+          <label for="date-ride">Дата выезда:</label>
+          <input type="text" name="date-ride" id="date-ride" placeholder="4 июля 2017">
+        </p>
+        <p>
+          <label for="quantity-adults">Взрослые:</label>
+          <input type="text" name="quantity-adults" id="quantity-adults" value="2"> <!-- Или использовать type="number"?  Как сделать + и - ?-->
+        </p>
+        <p>
+           <label for="quantity-children">Дети:</label>
+          <input type="text" name="quantity-children" id="quantity-children" value="0">
+        </p>
+        <button type="submit">Найти</button>
+      </form>
+    </section>
   </body>
 </html>

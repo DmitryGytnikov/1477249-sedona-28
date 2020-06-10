@@ -8,7 +8,7 @@
   <body>
     <header>
       <nav>
-        <a href="index.html">
+        <a href="index.html" aria-label="Логотип Sity of Sedona">
           <img src="img/svg/logo-sedona.svg" width="138" height="70" alt="Логотип Sity of Sedona">
         </a>
         <ul>
@@ -23,7 +23,53 @@
         <h1 class="visually-hidden">Sity of Sedona Гостиницы</h1>
         <section>
           <h2 class="visually-hidden">Фильтр гостиниц</h2>
-          <!--Здесь будет форма фильтра-->
+          <form action="https://echo.htmlacademy.ru" method="get">
+            <fieldset>
+              <legend>Инфраструктура:</legend>
+              <ul>
+                <li>
+                  <label>
+                    <input type="checkbox" name="pool" checked>Бассейн
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" name="parking">Парковка
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" name="wi-fi">Wi-Fi
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <legend>Тип жилья:</legend>
+              <ul>
+                <li>
+                  <label>
+                    <input type="checkbox" name="hotel" checked>Гостиница
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" name="motel" checked>Мотель
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" name="apartments" checked>Апартаменты
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <div>
+              <p>Стоимость в сутки (р):</p>
+              <!--Здесь будет ползунок с выбором стоимости-->
+            </div>
+            <button type="submit">Показать</button>
+          </form>
           <div>
             <h2>Найдено: 3</h2>
             <p>Сортировка:</p>
@@ -35,13 +81,14 @@
             <ul>
               <li>
                 <a href="">
-                <!--Треугольник вверх-->
-                <!--скрыть ч/з visually hidden или добавить aria-label="Треугольник вверх" - это для доступности-->
+                  <span class="visually-hidden">Треугольник вверх</span>
+                  <!--Треугольник вверх-->
                 </a>
               </li>
               <li>
                 <a href="">
-                <!--Треугольник вниз-->
+                  <span class="visually-hidden">Треугольник вниз</span>
+                  <!--Треугольник вниз-->
                 </a>
               </li>
             </ul>
@@ -105,7 +152,7 @@
       <section>
         <h2 class="visually-hidden">Телефон</h2>
         <p>
-          <a href="index.html">#visitsedona</a><br>
+          <a aria-label="Перейти на главную страницу" href="index.html">#visitsedona</a><br>
           <a href="tel:+74956660166">Тел: +7(495) 666-01-66</a>
         </p>
       </section>
@@ -113,19 +160,22 @@
         <h2 class="visually-hidden">Ссылки на соцсети</h2>
         <ul>
           <li>
-            <a class="visually-hidden" href="blank.html" target="_blank">Твиттер</a>
+            <a href="blank.html" target="_blank">
+              <span class="visually-hidden">Твиттер</span></a>
           </li>
           <li>
-            <a class="visually-hidden" href="blank.html" target="_blank">Фэйсбук</a>
+            <a href="blank.html" target="_blank">
+              <span class="visually-hidden">Фэйсбук</span></a>
           </li>
           <li>
-            <a class="visually-hidden" href="blank.html" target="_blank">Ютуб</a>
+            <a href="blank.html" target="_blank">
+              <span class="visually-hidden">Ютуб</span></a>
           </li>
         </ul>
       </section>
       <p>
         Website by
-        <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
+        <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" aria-label="Перейти на сайт htmlacademy">
           <img src="img/svg/logo-htmlacademy.svg" width="115" height="41" alt="Логотип htmlacademy">
         </a>
       </p>
