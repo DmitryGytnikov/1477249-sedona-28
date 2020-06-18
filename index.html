@@ -3,15 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Добавить важные, ключевые слова и краткое описание -->
   </head>
   <body>
-    <header>
-      <nav>
-        <a aria-label="Логотип Sity of Sedona" title="Вы уже на этой странице">
+    <header class="main-header">
+      <nav class="main-navigation">
+        <a class="main-header-logo" aria-label="Логотип Sity of Sedona" title="Вы уже на этой странице">
           <img src="img/svg/logo-sedona.svg" width="138" height="70" alt="Логотип Sity of Sedona">
         </a>
-        <ul>
+        <ul class="site-navigation">
           <li><a href="blank.html">Информация</a></li>
           <li><a href="blank.html">Фото и видео</a></li>
           <li><a href="blank.html">Карта штата</a></li>
@@ -19,135 +22,141 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="container">
       <h1 class="visually-hidden">Городок Седона</h1>
-      <div>
+      <div class="title">
         <img src="img/svg/intro-welcome.svg" width="457" height="351" alt="Надпись Welcome to Sedona">
       </div>
-      <section>
-        <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2><!--text-transform: uppercase;(весь текст сайта)-->
-        <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
-        <ul>
-          <li>
+      <section class="features">
+        <div class="features-title">
+          <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+          <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+        </div>
+        <ul class="advantages-list">
+          <li class="advantages-item-1">
               <h3>Настоящий городок</h3>
               <p>— №1 —</p>
               <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
               <img src="img/foto-sedona.jpg" width="800" height="256" alt="Фото Sity of Sedona">
-              <ul>
-                <li>
+              <ul class="feature-list">
+                <li class="feature-item">
                   <!--Иконку вставить ч/з background-image-->
                   <h4>Жильё</h4>
                   <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
                 </li>
-                <li>
+                <li class="feature-item">
                   <!--Иконку вставить ч/з background-image-->
                   <h4>Еда</h4>
                   <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
                 </li>
-                <li>
+                <li class="feature-item">
                   <!--Иконку вставить ч/з background-image-->
                   <h4>Сувениры</h4>
                   <p>Не только китайского, но и местного производства!</p>
                 </li>
               </ul>
           </li>
-          <li>
+          <li class="advantages-item-1">
               <img src="img/bridge-of-the-devil.jpg" width="800" height="256" alt="Фото Моста дьявола">
               <h3>Там есть Мост дьявола</h3>
               <p>— №2 —</p>
               <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
           </li>
-          <li>
+          <li class="advantages-item-2">
               <h3>Небольшая площадь</h3>
               <p>— №3 —</p>
               <p>Все достопримечательности находятся очень близко</p>
           </li>
-          <li>
+          <li class="advantages-item-2">
               <h3>Красивая дорога</h3>
               <p>— №4 —</p>
               <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
-          <li>
+          <li class="advantages-item-2">
               <h3>Мало туристов</h3>
               <p>— №5 —</p>
               <p>Большинство едет в гранд каньон и толпится там</p>
           </li>
         </ul>
       </section>
-      <div>
+      <div class="search">
         <h2>Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки,<br>
          и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <button type="button">Поиск гостиницы в Седоне</button>
+        <button class="button-brown" type="button">Поиск гостиницы в Седоне</button>
         <h3 class="visually-hidden"> Форма поиска гостиницы в Седоне</h3>
-        <form action="https://echo.htmlacademy.ru" method="get">
-          <div><!--Почему-то с <p> выдает ошибку валидатор-->
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+          <div class="search-item-full-width">
             <label for="date-come">Дата заезда:</label>
-            <div>
-              <input type="text" name="date-come" id="date-come" placeholder="24 апреля 2017">
+            <div class="input-date">
+              <input class="calendar-icon" type="text" name="date-come" id="date-come" placeholder="24 апреля 2017">
               <button type="button"><span class="visually-hidden">выбор даты на календаре</span></button>
             </div>
           </div>
-          <div>
+          <div class="search-item-full-width">
             <label for="date-ride">Дата выезда:</label>
-            <div>
-              <input type="text" name="date-ride" id="date-ride" placeholder="4 июля 2017">
+            <div class="input-date">
+              <input class="calendar-icon" type="text" name="date-ride" id="date-ride" placeholder="4 июля 2017">
               <button type="button"><span class="visually-hidden">выбор даты на календаре</span></button>
             </div>
           </div>
-          <div>
+          <div class="search-item-half-width">
             <label for="quantity-adults">Взрослые:</label>
-            <div>
+            <div class="input-quantity">
               <button type="button"><span class="visually-hidden">Уменьшение значения на единицу</span></button>
               <input type="text" name="quantity-adults" id="quantity-adults" value="2">
               <button type="button"><span class="visually-hidden">Увеличение значения на единицу</span></button>
             </div>
           </div>
-          <div>
+          <div class="search-item-half-width">
             <label for="quantity-children">Дети:</label>
-            <div>
+            <div class="input-quantity">
               <button type="button"><span class="visually-hidden">Уменьшение значения на единицу</span></button>
               <input type="text" name="quantity-children" id="quantity-children" value="0">
               <button type="button"><span class="visually-hidden">Увеличение значения на единицу</span></button>
             </div>
           </div>
-          <button type="submit">Найти</button>
+          <button class="button-blue" type="submit">Найти</button>
         </form>
       </div>
+      <div class="map">
       <img src="img/map.png" width="1200" height="594" alt="Блок карты">
       <!--Сделать карту интерактивной позднее-->
+      </div>
     </main>
-    <footer>
-      <section>
-        <h2 class="visually-hidden">Телефон</h2>
-        <p>
-          <a aria-label="хештег" href="blank.html">#visitsedona</a><br>
-          <a href="tel:+74956660166" aria-label="телефон">Тел: +7(495) 666-01-66</a>
+    <footer class="page-footer main-footer"><!-- Взял из примера. Для чего 2 класса? -->
+      <div class="container"> <!-- Взял из примера. Нужен ли? -->
+        <section class="footer-contacts">
+          <h2 class="visually-hidden">Телефон</h2>
+          <p>
+            <a aria-label="хештег" href="blank.html">#visitsedona</a><br>
+            <a href="tel:+74956660166" aria-label="телефон">Тел: +7(495) 666-01-66</a>
+          </p>
+        </section>
+        <section class="footer-social">
+          <h2 class="visually-hidden">Ссылки на соцсети</h2>
+          <ul>
+            <li class="twitter">
+              <a class="social-button" href="blank.html" target="_blank">
+                <span class="visually-hidden">Твиттер</span></a>
+            </li>
+            <li class="facebook">
+              <a class="social-button" href="blank.html" target="_blank">
+                <span class="visually-hidden">Фэйсбук</span></a>
+            </li>
+            <li class="youtube">
+             <a class="social-button" href="blank.html" target="_blank">
+                <span class="visually-hidden">Ютуб</span></a>
+            </li>
+          </ul>
+        </section>
+        <p class="footer-copyright">
+          Website by
+          <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" aria-label="Перейти на сайт htmlacademy">
+            <img src="img/svg/logo-htmlacademy.svg" width="115" height="41" alt="Логотип htmlacademy">
+          </a>
         </p>
-      </section>
-      <section>
-        <h2 class="visually-hidden">Ссылки на соцсети</h2>
-        <ul>
-          <li>
-            <a href="blank.html" target="_blank">
-              <span class="visually-hidden">Твиттер</span></a>
-          </li>
-          <li>
-            <a href="blank.html" target="_blank">
-              <span class="visually-hidden">Фэйсбук</span></a>
-          </li>
-          <li>
-            <a href="blank.html" target="_blank">
-              <span class="visually-hidden">Ютуб</span></a>
-          </li>
-        </ul>
-      </section>
-      <p>
-        Website by
-        <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" aria-label="Перейти на сайт htmlacademy">
-          <img src="img/svg/logo-htmlacademy.svg" width="115" height="41" alt="Логотип htmlacademy">
-        </a>
-      </p>
+      </div>
     </footer>
   </body>
 </html>
