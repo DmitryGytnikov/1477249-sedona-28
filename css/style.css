@@ -1,11 +1,6 @@
 /* Variables */
 
 :root {
-  /*Я разделил: --special - цвета описания состояний интерактивных
-   элементов, --basic - цвета фонов и неинтерактивных элементов (если цвет
-   используется и в описании состояний интерактивных элементов - то оставляю
-   в --basic.
-   Верно ли такое разделение? */
   --basic-white: #FFFFFF;
   --basic-blue-light: #81B3D2;
   --basic-light: #EEEEEE;
@@ -24,30 +19,24 @@
   --special-grey: #A9A9A9;
 }
 
-
 /* Global */
 
 body {
-  min-width: 1220px;
+  min-width: 1200px;
   margin: 0;
-  padding: 0;
   text-transform: uppercase;
-  font-family:"PT Sans", "Arial", sans-serif; /*Можно ли так подключить
-  шрифты; обязательно подключать шрифты через css-директивы и скачивать форматы
-   woff и woff2 (в таком случае куда пареместить скаченную папку с woff
-   и woff2, чтобы шрифты подключились)?*/
+  font-family:"PT Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  color: var(--basic-dark, #333333);
-  background-color: var(--basic-white, #FFFFFF);
+  color: var(--basic-dark);
+  background-color: var(--basic-white);
 }
 
 img {
 max-width: 100%;
 height: auto;
-} /* в итоге картинки немного иначе браузером
-отображаются, особенно карта; стоит ли использовать?*/
+}
 
 a {
   text-decoration: none;
@@ -71,67 +60,65 @@ a {
 .main-navigation {
   line-height: 26px;
   font-weight: 700;
-  color: var(--basic-black, #000000);
-  background-color: transparent;
-}
+ }
 
 .site-navigation {
-  background-color: var(--basic-white, #FFFFFF);
-/*Сделал по образцу. Можно ли было просто задать прозрачный фон изображению
-логотипа?*/
-/*Почему-то у ссылок меню снова появились подчеркивания и метки-кружки?*/
   list-style: none;
 }
-/*А подчеркивания так и не исчезли?*/
 
-.site-navigation-current a:not([href]) {
-  background-color: var(--basic-white, #FFFFFF);
-} /* В образце было -current: для чего? Я пока оставил. Для чего это правило
-сделали?*/
+.site-navigation a:not([href]) {
+  color: var(--basic-brown-light);
+}
 
 .site-navigation a {
-  color: var(--basic-black, #000000);
-  text-decoration: none; /*Вынужден продублировать. Как сделать, чтобы не
-  повторялось?*/
+  font: inherit;
+  color: var(--basic-black);
 }
 
-.site-navigation a:hover,
+.site-navigation a:hover {
+  color: var(--basic-blue-light);
+}
+
 .site-navigation a:focus {
-  background-color: var(--basic-light, #EEEEEE);
-}
-
-a.current-page {
-  color: var(--basic-brown-light, #766357);
+  color: var(--basic-black);
+  opacity: 0.3;
 }
 
 /*Title*/
 
 .title {
-  background-color: var(--basic-light, #EEEEEE);
-  background-image: url("img/background-photo-1.jpg"); /*Не отображается?*/
-  background-image: url("img/svg/intro-mask.svg"); /*Не отображается?*/
-  background-position: center top;
+  background-color: var(--basic-light);
+  background-image: url("../img/background-photo-1.jpg");
+  background-position: center center;
   background-repeat: no-repeat;
   text-align: center;
-} /*Как расположить один фон по центру, а второй фон - снизу
-  по центру?*/
+}
+/*+ бэкграунд сайз?*/
+
+.title div {
+  background-image: url("../img/svg/intro-mask.svg"); /*Не отображается?
+  Посмотреть «Рамки и фоны, часть 2» + после прохождения лекции о сетках*/
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
 
 /*Features*/
 
 .features h2 {
   font-weight: 700;
   font-size: 21px;
-  line-height: 21px;
-  color: var(--basic-black, #000000);
+  line-height: 26px;
+  color: var(--basic-black);
 }
 
-.features > p {
+.features-title p {
   line-height: 26px;
 }
 
 .features-title {
   text-align: center;
-  border: 1px solid var(--basic-white, #FFFFFF);
 }
 
 /*Search*/
@@ -140,7 +127,7 @@ a.current-page {
   font-weight: 700;
   font-size: 30px;
   line-height: 24px;
-  color: var(--basic-black, #000000);
+  color: var(--basic-black);
   text-align: center;
 }
 
@@ -149,51 +136,45 @@ a.current-page {
 }
 
 /* Button */
-
+/*Проставить кнопкам классы *button button-brown* после прохождения
+лекции о сетках*/
 .button-brown {
   font: inherit;
   font-size: 21px;
-  line-height: 26px; /*Если текст в одну строку, нужно ли переопределять line-height?*/
-  color: var(--basic-white, #FFFFFF);
+  line-height: 26px;
+  color: var(--basic-white);
   text-align: center;
-  vertical-align: middle;
   text-transform: uppercase;
-  background-color: var(--basic-brown-light, #766357);
-  border: none;
+  background-color: var(--basic-brown-light);
 }
- /*Как можно минимилизировать стили для кнопок: их 3 вида по цвету
- и от ображению при наведении (которые, в свою очередь, делятся
- на 2 типа по размеру)?*/
- /*Как задать размер отображения кнопке?*/
 
 .button-brown:hover,
 .button-brown:focus {
-  background-color: var(--special-brown, #604E43);
-} /*При фокусе появляется пунктирная обводка: как ее можно убрать?*/
+  background-color: var(--special-brown);
+}
 
 .button-brown:active {
-  background-color: var(--special-brown-dark, #503E33);
+  background-color: var(--special-brown-dark);
 }
 
 .button-blue {
   font: inherit;
   font-size: 21px;
   line-height: 26px;
-  color: var(--basic-white, #FFFFFF);
+  color: var(--basic-white);
   text-align: center;
-  vertical-align: middle;
   text-transform: uppercase;
-  background-color: var(--basic-blue-light, #81B3D2);
+  background-color: var(--basic-blue-light);
   border: none;
 }
 
 .button-blue:hover,
 .button-blue:focus {
-  background-color: var(--special-blue, #669EC0);
+  background-color: var(--special-blue);
 }
 
 .button-blue:active {
-  background-color: var(--special-blue-dark, #5496BD);
+  background-color: var(--special-blue-dark);
 }
 
 /*form */
@@ -202,32 +183,30 @@ a.current-page {
 .input-quantity input {
   font: inherit;
   border: none;
-  background-color: var(--basic-extra-light, #F2F2F2);
+  background-color: var(--basic-extra-light);
 }
-/*Как размеры полей задавать?*/
 
 .input-date input:hover,
 .input-quantity input:hover {
-  background-color: var(--special-extra-light, #EBEBEB);
+  background-color: var(--special-extra-light);
 }
 
 .input-date input:focus,
 .input-quantity input:focus {
   background-color: transparent;
-  border: 2px solid var(--basic-light-brown, #E5E5E5);
+  border: 2px solid var(--basic-light-brown);
 }
 
 .calendar-icon {
-  background-image: url("img/svg/calendar.svg");
-  background-position: 270px center;
+  background-image: url("../img/svg/calendar.svg");
+  background-position: center center;
   background-repeat: no-repeat;
-} /*Иконка календаря не отображается?*/
+} /*Иконка календаря поменяла цвет на черный*/
 
-/*Как поле ввода с кнопками + и - объединить ?*/
-
+/*Поле ввода с кнопками + и - объединить ?*/
 /* Main footer */
-
 /*Как слегка прозрачный фон футера навесить над картой?*/
+
 .main-footer {
    background-color: rgba(255, 255, 255, 0.9);
 }
@@ -236,13 +215,11 @@ a.current-page {
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
-  color: var(--basic-black, #000000);
-  text-decoration: none;
+  color: var(--basic-black);
 }
 
 .footer-contacts {
 text-align: center;
-vertical-align: middle;
 }
 
 .footer-social {
@@ -256,60 +233,59 @@ vertical-align: middle;
 .footer-copyright {
   font-size: 14px;
   line-height: 26px;
-  color: var(--basic-black, #000000);
+  color: var(--basic-black);
   text-align: center;
-}
-
-.footer-copyright img {
-  vertical-align: middle;
 }
 
 /* Social button */
 
 .twitter {
-  background-image: url("img/svg/twitter.svg"); /*Не отображается?*/
+  background-image: url("../img/svg/twitter.svg"); /*Не отображается
+  без задания размеров*/
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 .facebook {
-  background-image: url("img/svg/fb-icon.svg"); /*Не отображается?*/
+  background-image: url("../img/svg/fb-icon.svg"); /*Не отображается без
+  задания размеров*/
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 .youtube {
-  background-image: url("img/svg/youtube.svg"); /*Не отображается?*/
+  background-image: url("../img/svg/youtube.svg"); /*Не отображается без
+  задания размеров*/
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 .social-button {
-  background-color: var(--basic-blue-light, #81B3D2);
+  background-color: var(--basic-blue-light);
 }
 
 .social-button:hover,
 .social-button:focus {
-  background-color: var(--special-blue, #669EC0);
+  background-color: var(--special-blue);
 }
 
 .social-button:active {
-  background-color: var(--special-blue-dark, #5496BD);
+  background-color: var(--special-blue-dark);
 }
 
 /*Copyright button*/
-/*Как заменить картинку логотипа html-академии при наведении и
-нажатии (или, может быть, можно цвет svg изображения менять)?*/
+/*Замену цвета интерактивной картинки логотипа html-академии сделать,
+ если успею*/
 
 /*.footer-copyright a:hover,
 .footer-copyright a:focus {
-
+  color: var(--special-blue-dark);
 }
 
 .footer-copyright a:active {
 
-}
-*/
+}*/
+
 
 /*Catalog*/
 
@@ -318,7 +294,7 @@ vertical-align: middle;
 }
 
 .catalog-item-image {
-  background-color: var(--basic-light, #EEEEEE);
+  background-color: var(--basic-light);
 }
 
 a.name-hotel {
@@ -326,29 +302,30 @@ a.name-hotel {
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
-  color: var(--basic-black, #000000);
+  color: var(--basic-black);
 }
 
 a.name-hotel:hover,
 a.name-hotel:focus {
-  color: var(--basic-blue-light, #81B3D2);
+  color: var(--basic-blue-light);
 }
 
 a.name-hotel:active {
-  color: var(--basic-black, #000000);
+  color: var(--basic-black);
   opacity: 0.3;
 }
 
 .rating span {
-  background-image: url("img/svg/star.svg"); /*Не отображается?*/
+  background-image: url("../img/svg/star.svg"); /*24 Не отображается
+  (span строчный блок, задать ширину блока)?*/
   background-position: center center;
-  background-repeat: repeat-x;
+  background-repeat: space;
   /*5 звезд чтобы отобразились: нужно задать нужный размер <span> и
-  применить repeat-x; или background-image продублировать 3 раза?*/
+  применить space */
 }
 /*Задать разные классы для 5ти, 3х и 2х звезд?*/
 
 .rating p {
-  color: var(--basic-grey, #666666);
-  background-color: var(--basic-extra-light, #F2F2F2);
+  color: var(--basic-grey);
+  background-color: var(--basic-extra-light);
 }
