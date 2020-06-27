@@ -36,23 +36,25 @@
         </div>
         <ul class="advantages-list">
           <li class="advantages-item-1">
-              <h3>Настоящий городок</h3>
-              <p>— №1 —</p>
-              <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
+              <div class="blue-background">
+                <h3>Настоящий городок</h3>
+                <p>— №1 —</p>
+                <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
+              </div>
               <img src="img/foto-sedona.jpg" width="800" height="256" alt="Фото Sity of Sedona">
               <ul class="feature-list">
                 <li class="feature-item">
-                  <!--Иконку вставить ч/з background-image-->
+                  <div class="housing"></div>
                   <h4>Жильё</h4>
                   <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
                 </li>
                 <li class="feature-item">
-                  <!--Иконку вставить ч/з background-image-->
+                  <div class="meal"></div>
                   <h4>Еда</h4>
                   <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
                 </li>
                 <li class="feature-item">
-                  <!--Иконку вставить ч/з background-image-->
+                  <div class="souvenir"></div>
                   <h4>Сувениры</h4>
                   <p>Не только китайского, но и местного производства!</p>
                 </li>
@@ -60,9 +62,11 @@
           </li>
           <li class="advantages-item-1">
               <img src="img/bridge-of-the-devil.jpg" width="800" height="256" alt="Фото Моста дьявола">
-              <h3>Там есть Мост дьявола</h3>
-              <p>— №2 —</p>
-              <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+              <div class="blue-background">
+                <h3>Там есть Мост дьявола</h3>
+                <p>— №2 —</p>
+                <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+              </div>
           </li>
           <li class="advantages-item-2">
               <h3>Небольшая площадь</h3>
@@ -122,8 +126,8 @@
         </form>
       </div>
       <div class="map">
-      <img src="img/map.png" width="1200" height="594" alt="Блок карты">
-      <!--Сделать карту интерактивной позднее-->
+        <img src="img/map.png" width="1200" height="594" alt="Блок карты">
+        <!--Сделать карту интерактивной позднее-->
       </div>
     </main>
     <footer class="page-footer main-footer"><!-- Взял из примера. Для чего 2 класса? -->
@@ -138,17 +142,20 @@
         <section class="footer-social">
           <h2 class="visually-hidden">Ссылки на соцсети</h2>
           <ul>
-            <li class="twitter">
+            <li>
               <a class="social-button" href="blank.html" target="_blank">
                 <span class="visually-hidden">Твиттер</span></a>
+                <svg width="17" height="15" viewBox="0 0 17 15"><path fill="#FFFFFF" d="M10.95.144c1.685-.496 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708a2.345 2.345 0 0 1-.857 1.768c.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75-3.175 11.217-10.077 11.082h-.446c-.41 0-4.164-.46-4.898-1.887 2.271.196 3.893-.422 4.693-1.177-.96-.3-2.679-.477-2.979-2.95.349.106.564.228 1.19.119C1.705 8.247.374 7.53.448 5.33c.285.328 1.067.536 1.34.472C1.085 5.561-.182 2.442.894.85c1.818 1.854 3.735 3.606 7.152 3.773C8.254 2.33 9.183.793 10.95.144z"/></svg>
             </li>
-            <li class="facebook">
+            <li>
               <a class="social-button" href="blank.html" target="_blank">
                 <span class="visually-hidden">Фэйсбук</span></a>
+                <svg width="12" height="22" viewBox="0 0 12 22"><path fill="#FFFFFF" d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z"/></svg>
             </li>
-            <li class="youtube">
+            <li>
              <a class="social-button" href="blank.html" target="_blank">
                 <span class="visually-hidden">Ютуб</span></a>
+                <svg width="20" height="16" viewBox="0 0 20 16"><path fill="#FFFFFF" d="M17 0H3C1.35 0 0 1.35 0 3v10c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM6.027 11.998V4.002L15.014 8l-8.987 3.998z"/></svg>
             </li>
           </ul>
         </section>

@@ -42,6 +42,10 @@ a {
   text-decoration: none;
 }
 
+/**, *::before, *::after {
+  box-sizing: border-box;
+}*/  /* Пока не применять*/
+
 /*Скрытые заголовки и скрытые описания ссылок*/
 
 .visually-hidden {
@@ -54,6 +58,10 @@ a {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+
+/*index.html*/
+
 
 /* Main navigation*/
 
@@ -68,6 +76,7 @@ a {
 
 .site-navigation a:not([href]) {
   color: var(--basic-brown-light);
+  cursor: default;
 }
 
 .site-navigation a {
@@ -93,16 +102,17 @@ a {
   background-repeat: no-repeat;
   text-align: center;
 }
-/*+ бэкграунд сайз?*/
 
 .title div {
-  background-image: url("../img/svg/intro-mask.svg"); /*Не отображается?
-  Посмотреть «Рамки и фоны, часть 2» + после прохождения лекции о сетках*/
+  background-image: url("../img/svg/intro-mask.svg");
   background-position: center center;
   background-repeat: no-repeat;
   text-align: center;
+  padding: 20px 0px 20px 0px; /*После задания внутрених отступов
+  стал отображаться. Разместить где нужно: посмотреть «Рамки и фоны,
+  часть 2» (background-origin, бэкграунд сайз, множественный фон) +
+  после прохождения лекции о сетках.*/
 }
-
 
 /*Features*/
 
@@ -121,6 +131,61 @@ a {
   text-align: center;
 }
 
+ul.advantages-list,
+ul.feature-list {
+  list-style: none;
+}
+
+div.blue-background {
+  background-color: var(--basic-blue-light);
+}
+
+.blue-background h3 {
+  font-weight: 700;
+  font-size: 21px;
+  color: var(--basic-white);
+}
+
+.blue-background p {
+  color: var(--basic-white);
+}
+
+div.housing {
+  width: 75px;
+  height: 72px;
+  background-image: url("../img/svg/icon-1.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+div.meal {
+  width: 75px;
+  height: 70px;
+  background-image: url("../img/svg/icon-3.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+div.souvenir {
+  width: 75px;
+  height: 72px;
+  background-image: url("../img/svg/icon-2.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.feature-item h4 {
+  font-weight: 700;
+  font-size: 21px;
+  color: var(--basic-black);
+}
+
+.advantages-item-2 h3 {
+  font-weight: 700;
+  font-size: 21px;
+  color: var(--basic-black);
+}
+
 /*Search*/
 
 .search h2 {
@@ -136,8 +201,8 @@ a {
 }
 
 /* Button */
-/*Проставить кнопкам классы *button button-brown* после прохождения
-лекции о сетках*/
+/*Проставить кнопкам классы *button button-brown text full-width*
+после прохождения лекции о сетках*/
 .button-brown {
   font: inherit;
   font-size: 21px;
@@ -204,12 +269,17 @@ a {
 } /*Иконка календаря поменяла цвет на черный*/
 
 /*Поле ввода с кнопками + и - объединить ?*/
+
 /* Main footer */
-/*Как слегка прозрачный фон футера навесить над картой?*/
+
+/*Cлегка прозрачный фон футера навесить над картой через
+отрицательный маржин-топ*/
 
 .main-footer {
-   background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
 }
+
+/*Footer-contacts*/
 
 .footer-contacts a {
   font-weight: 700;
@@ -218,51 +288,21 @@ a {
   color: var(--basic-black);
 }
 
-.footer-contacts {
-text-align: center;
-}
-
-.footer-social {
-  text-align: center;
-}
+/*Footer-social*/
 
 .footer-social ul {
   list-style: none;
 }
 
-.footer-copyright {
-  font-size: 14px;
-  line-height: 26px;
-  color: var(--basic-black);
-  text-align: center;
-}
-
-/* Social button */
-
-.twitter {
-  background-image: url("../img/svg/twitter.svg"); /*Не отображается
-  без задания размеров*/
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-.facebook {
-  background-image: url("../img/svg/fb-icon.svg"); /*Не отображается без
-  задания размеров*/
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-.youtube {
-  background-image: url("../img/svg/youtube.svg"); /*Не отображается без
-  задания размеров*/
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-.social-button {
+a.social-button {
+  display: block;
+  width: 46px;
+  height: 48px;
   background-color: var(--basic-blue-light);
 }
+
+/*Чтобы белые иконки отобразились - нужно отключить белый фон у
+.main-footer и body*/
 
 .social-button:hover,
 .social-button:focus {
@@ -273,9 +313,17 @@ text-align: center;
   background-color: var(--special-blue-dark);
 }
 
-/*Copyright button*/
+/*Footer-copyright*/
+
+.footer-copyright {
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--basic-black);
+  text-align: center;
+}
+
 /*Замену цвета интерактивной картинки логотипа html-академии сделать,
- если успею*/
+ если успею(+<img> на <svg> для этого заменить)*/
 
 /*.footer-copyright a:hover,
 .footer-copyright a:focus {
@@ -283,9 +331,92 @@ text-align: center;
 }
 
 .footer-copyright a:active {
-
+  color: var(--special-blue-dark);
 }*/
 
+
+/*hotels.html*/
+
+/*filters*/
+
+div.filters {
+  background-color: var(--basic-light);
+  background-image: url("../img/background-filter.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.filter legend {
+  font: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  color: var(--basic-white);
+}
+
+.filter ul {
+  font: inherit;
+  list-style: none;
+  color: var(--basic-white);
+}
+
+div.price {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  color: var(--basic-white);
+}
+
+/*Стили для кнопки задам, когда пойму, как задавать размеры
+кнопкам: чтобы задать множественные классы всем кнопкам.*/
+
+/*sort*/
+
+.sort h2 {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--basic-black);
+}
+
+.sort p {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--basic-black);
+}
+
+/* Breadcrumbs */
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs a {
+  font: inherit;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--basic-black);
+  opacity: 0.3;
+  border-bottom: 1px dashed #81B3D2;
+}
+
+.breadcrumbs-active a {
+  color: var(--basic-blue-light);
+  opacity: 1;
+  border-bottom: none;
+}
+
+/*Сделать, если успею:*/
+/*.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+  background-color:  ;
+}*/
+
+/*sort-list*/
+
+.sort-list {
+  list-style: none;
+}
 
 /*Catalog*/
 
@@ -315,15 +446,28 @@ a.name-hotel:active {
   opacity: 0.3;
 }
 
-.rating span {
-  background-image: url("../img/svg/star.svg"); /*24 Не отображается
-  (span строчный блок, задать ширину блока)?*/
-  background-position: center center;
-  background-repeat: space;
-  /*5 звезд чтобы отобразились: нужно задать нужный размер <span> и
-  применить space */
+.rating div {
+  width: 90px;
+  height: 18px;
+  background-image: url("../img/svg/star.svg");
+  background-repeat: space no-repeat;
+  background-size: contain;
 }
-/*Задать разные классы для 5ти, 3х и 2х звезд?*/
+
+.rating .four-stars {
+  width: 90px;
+  height: 18px;
+}
+
+.rating .three-stars {
+  width: 65px;
+  height: 18px;
+}
+
+.rating .two-stars{
+  width: 41px;
+  height: 18px;
+}
 
 .rating p {
   color: var(--basic-grey);
