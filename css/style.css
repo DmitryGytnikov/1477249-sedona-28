@@ -30,7 +30,7 @@ body {
   font-size: 14px;
   line-height: 21px;
   color: var(--basic-dark);
-  background-color: var(--basic-white);
+  background-color: var(--basic-extra-light);
 }
 
 img {
@@ -59,18 +59,69 @@ a {
   overflow: hidden;
 }
 
+/* Grid */
+
+.page {
+  height: 100%;
+}
+
+.page-body {
+  width: 1200px; /*? Нет в образце*/
+  margin: 0 auto; /*? Нет в образце*/
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  background-color: var(--basic-white);
+  /*тень добавить*/
+}
+
 
 /*index.html*/
 
+
+/* Main header */
+
+.main-header {
+  outline: 5px solid rgba(0, 255, 0, 0.3);
+  outline-offset: -5px;
+}
 
 /* Main navigation*/
 
 .main-navigation {
   line-height: 26px;
   font-weight: 700;
+  display: flex; /*?*/
+  flex-direction: column; /*?*/
+  align-items: center; /*?*/
  }
 
+/* Logo */
+
+.main-header-logo {
+  order: 2;/*?*/
+  width: 138px;/*?*/
+  height: 70px;/*?*/
+  outline: 5px solid rgba(255, 0, 0, 0.3);
+  outline-offset: -5px;
+}
+
+/* Container */
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
 .site-navigation {
+  margin: 0;
+  padding: 0;
+  min-height: 56px;  /*?*/
+  width: 100%; /*?*/
+  outline: 5px solid rgba(0, 255, 255, 0.3);
+  outline-offset: -5px;
   list-style: none;
 }
 
@@ -96,14 +147,19 @@ a {
 /*Title*/
 
 .title {
+  outline: 5px solid rgba(0, 255, 0, 0.3);
+  outline-offset: -5px;
   background-color: var(--basic-light);
   background-image: url("../img/background-photo-1.jpg");
   background-position: center center;
   background-repeat: no-repeat;
+  background-size: 1200px 509px;
   text-align: center;
 }
 
 .title div {
+  outline: 5px solid rgba(255, 0, 0 , 0.3);
+  outline-offset: -5px;
   background-image: url("../img/svg/intro-mask.svg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -128,11 +184,27 @@ a {
 }
 
 .features-title {
+  outline: 5px solid rgba(0, 255, 0, 0.3);
+  outline-offset: -5px;
   text-align: center;
 }
 
-ul.advantages-list,
+ul.advantages-list {
+  margin: 0;
+  padding: 0;
+  outline: 5px solid rgba(0, 255, 0, 0.3);
+  outline-offset: -5px;
+  list-style: none;
+}
+
 ul.feature-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 121px;
+  outline: 5px solid rgba(255, 0, 0, 0.3);
+  outline-offset: -5px;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -167,8 +239,8 @@ div.meal {
 }
 
 div.souvenir {
-  width: 75px;
-  height: 72px;
+  width: 64px;
+  height: 77px;
   background-image: url("../img/svg/icon-2.svg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -186,7 +258,28 @@ div.souvenir {
   color: var(--basic-black);
 }
 
+.feature-item {
+  outline: 5px solid rgba(0, 0, 255, 0.3);
+  outline-offset: -5px;
+}
+
+.advantages-item-1 {
+  outline: 5px solid rgba(0, 255, 255, 0.3);
+  outline-offset: -5px;
+}
+
+.advantages-item-2 {
+  background-color: var(--basic-light);
+  outline: 5px solid rgba(0, 255, 255, 0.3);
+  outline-offset: -5px;
+}
+
 /*Search*/
+
+.title-search {
+  outline: 5px solid rgba(0, 255, 0, 0.3);
+  outline-offset: -5px;
+}
 
 .search h2 {
   font-weight: 700;
@@ -244,6 +337,11 @@ div.souvenir {
 
 /*form */
 
+.search-form {
+  outline: 5px solid rgba(0, 255, 0, 0.3);
+  outline-offset: -5px;
+}
+
 .input-date input,
 .input-quantity input {
   font: inherit;
@@ -270,16 +368,34 @@ div.souvenir {
 
 /*Поле ввода с кнопками + и - объединить ?*/
 
+/*Map*/
+.map {
+  outline: 5px solid rgba(0, 255, 0, 0.3);
+  outline-offset: -5px;
+}
+
 /* Main footer */
 
 /*Cлегка прозрачный фон футера навесить над картой через
 отрицательный маржин-топ*/
 
 .main-footer {
+  outline: 5px solid rgba(255, 0, 0, 0.7);
+  outline-offset: -5px;
   background-color: rgba(255, 255, 255, 0.9);
 }
 
+.main-footer .container {
+  display: flex;
+  justify-content: space-around;
+}
+
 /*Footer-contacts*/
+
+.footer-contacts {
+  outline: 5px solid rgba(0, 255, 255, 0.7);
+  outline-offset: -5px;
+}
 
 .footer-contacts a {
   font-weight: 700;
@@ -289,6 +405,11 @@ div.souvenir {
 }
 
 /*Footer-social*/
+
+.footer-social {
+  outline: 5px solid rgba(0, 255, 0, 0.7);
+  outline-offset: -5px;
+}
 
 .footer-social ul {
   list-style: none;
@@ -316,6 +437,8 @@ a.social-button {
 /*Footer-copyright*/
 
 .footer-copyright {
+  outline: 5px solid rgba(255, 0, 255, 0.7);
+  outline-offset: -5px;
   font-size: 14px;
   line-height: 26px;
   color: var(--basic-black);
@@ -344,6 +467,7 @@ div.filters {
   background-image: url("../img/background-filter.jpg");
   background-position: center center;
   background-repeat: no-repeat;
+  background-size: 1200px 217px;
 }
 
 .filter legend {
@@ -397,7 +521,7 @@ div.price {
   line-height: 18px;
   color: var(--basic-black);
   opacity: 0.3;
-  border-bottom: 1px dashed #81B3D2;
+  border-bottom: 1px dashed var(--basic-blue-light);
 }
 
 .breadcrumbs-active a {
