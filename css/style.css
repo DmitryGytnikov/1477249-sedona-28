@@ -89,8 +89,8 @@ a {
 /* Main header */
 
 .main-header {
-  outline: 5px solid rgba(0, 255, 0, 0.3);
-  outline-offset: -5px;
+  /*outline: 5px solid rgba(0, 255, 0, 0.3);
+  outline-offset: -5px;*/
 }
 
 /* Main navigation*/
@@ -110,8 +110,8 @@ a {
   width: 138px;
   height: 70px;
   overflow: hidden;
-  outline: 5px solid rgba(255, 0, 0, 0.3);
-  outline-offset: -5px;
+  /*outline: 5px solid rgba(255, 0, 0, 0.3);
+  outline-offset: -5px;*/
 }
 
 .site-navigation {
@@ -120,8 +120,8 @@ a {
   padding: 0;
   min-height: 56px;
   width: 1200px;
-  outline: 5px solid rgba(0, 255, 255, 0.3);
-  outline-offset: -5px;
+  /*outline: 5px solid rgba(0, 255, 255, 0.3);
+  outline-offset: -5px;*/
   list-style: none;
 }
 
@@ -179,8 +179,8 @@ a {
 /*Title*/
 
 .title {
-  outline: 5px solid rgba(0, 255, 0, 0.3);
-  outline-offset: -5px;
+  /*outline: 5px solid rgba(0, 255, 0, 0.3);
+  outline-offset: -5px;*/
   height: 431px; /*509-78=431*/
   text-align: center;
   padding-top: 78px;
@@ -213,8 +213,8 @@ a {
 
 .features-title {
   min-height: 173px;
-  outline: 5px solid rgba(0, 255, 0, 0.3);
-  outline-offset: -5px;
+  /*outline: 5px solid rgba(0, 255, 0, 0.3);
+  outline-offset: -5px;*/
   padding-top: 43px;
 }
 
@@ -223,8 +223,8 @@ ul.advantages-list {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  outline: 5px solid rgba(0, 255, 0, 0.3);
-  outline-offset: -5px;
+  /*outline: 5px solid rgba(0, 255, 0, 0.3);
+  outline-offset: -5px;*/
   list-style: none;
 }
 
@@ -233,8 +233,8 @@ ul.feature-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   /*column-gap: 121px;*/
-  outline: 5px solid rgba(255, 0, 0, 0.3);
-  outline-offset: -5px;
+  /*outline: 5px solid rgba(255, 0, 0, 0.3);
+  outline-offset: -5px;*/
   margin: 0;
   padding: 0;
   list-style: none;
@@ -315,8 +315,8 @@ div.souvenir {
   padding-top: 55px;
   min-height: 275px;
   /*padding: 55px 0 82px 0;*/
-  outline: 5px solid rgba(0, 0, 255, 0.3);
-  outline-offset: -5px;
+  /*outline: 5px solid rgba(0, 0, 255, 0.3);
+  outline-offset: -5px;*/
 }
 
 .advantages-item-2 h3 {
@@ -341,15 +341,15 @@ div.souvenir {
 
 .advantages-item-1 {
   display: flex;
-  outline: 5px solid rgba(0, 255, 255, 0.3);
-  outline-offset: -5px;
+  /*outline: 5px solid rgba(0, 255, 255, 0.3);
+  outline-offset: -5px;*/
 }
 
 .advantages-item-1-with-feature{
   display: flex;
   flex-wrap: wrap;
-  outline: 5px solid rgba(0, 255, 255, 0.3);
-  outline-offset: -5px;
+  /*outline: 5px solid rgba(0, 255, 255, 0.3);
+  outline-offset: -5px;*/
 }
 
 .advantages-item-2 {
@@ -357,8 +357,8 @@ div.souvenir {
   min-height: 209px; /*256-47=209*/
   width: 400px;
   background-color: var(--basic-light);
-  outline: 5px solid rgba(0, 255, 255, 0.3);
-  outline-offset: -5px;
+  /*outline: 5px solid rgba(0, 255, 255, 0.3);
+  outline-offset: -5px;*/
 }
 
 /*Search*/
@@ -370,8 +370,8 @@ div.souvenir {
 
 .title-search {
   padding-top: 58px;
-  outline: 5px solid rgba(0, 255, 0, 0.3);
-  outline-offset: -5px;
+  /*outline: 5px solid rgba(0, 255, 0, 0.3);
+  outline-offset: -5px;*/
 }
 
 .title-search h2 {
@@ -462,8 +462,8 @@ div.souvenir {
   position: absolute;
   top: 280px;
   left: 316px;
-  outline: 5px solid rgba(0, 255, 0, 0.3);
-  outline-offset: -5px;
+  /*outline: 5px solid rgba(0, 255, 0, 0.3);
+  outline-offset: -5px;*/
 }
 
 .search-form label {
@@ -523,8 +523,8 @@ div.final {
 .search-item-full-width {
   display: flex;
   align-items: baseline;
-  outline: 5px solid rgba(0, 255, 0, 0.3);
-  outline-offset: -5px;
+  /*outline: 5px solid rgba(0, 255, 0, 0.3);
+  outline-offset: -5px;*/
 }
 
 .search-item-full-width:nth-child(1) input {
@@ -539,8 +539,8 @@ div.final {
 .search-item-half-width {
   display: flex;
   align-items: baseline;
-  outline: 5px solid rgba(0, 255, 0, 0.3);
-  outline-offset: -5px;
+  /*outline: 5px solid rgba(0, 255, 0, 0.3);
+  outline-offset: -5px;*/
 }
 
 /*.input-date input:hover,
@@ -564,8 +564,8 @@ div.final {
 
 /*Map*/
 .map {
-  outline: 5px solid rgba(0, 255, 0, 0.3);
-  outline-offset: -5px;
+  /*outline: 5px solid rgba(0, 255, 0, 0.3);
+  outline-offset: -5px;*/
 }
 
 /* Main footer */
@@ -573,8 +573,8 @@ div.final {
 .main-footer {
   display: flex;
   justify-content: space-around;
-  outline: 5px solid rgba(255, 0, 0, 0.7);
-  outline-offset: -5px;
+  /*outline: 5px solid rgba(255, 0, 0, 0.7);
+  outline-offset: -5px;*/
   background-color: rgba(255, 255, 255, 0.9);
 }
 
@@ -586,8 +586,8 @@ footer.above-map {
 
 .footer-contacts {
   padding: 23px 0 36px 0;
-  outline: 5px solid rgba(0, 255, 255, 0.7);
-  outline-offset: -5px;
+  /*outline: 5px solid rgba(0, 255, 255, 0.7);
+  outline-offset: -5px;*/
 }
 
 .footer-contacts p {
@@ -606,8 +606,8 @@ footer.above-map {
 /*Footer-social*/
 
 .footer-social {
-  outline: 5px solid rgba(0, 255, 0, 0.7);
-  outline-offset: -5px;
+  /*outline: 5px solid rgba(0, 255, 0, 0.7);
+  outline-offset: -5px;*/
 }
 
 .footer-social ul {
@@ -671,8 +671,8 @@ a.social-button {
   display: flex;
   align-items: center;
   margin: 0;
-  outline: 5px solid rgba(255, 0, 255, 0.7);
-  outline-offset: -5px;
+  /*outline: 5px solid rgba(255, 0, 255, 0.7);
+  outline-offset: -5px;*/
   font-size: 14px;
   line-height: 26px;
   color: var(--basic-black);
