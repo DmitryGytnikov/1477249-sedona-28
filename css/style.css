@@ -1,3 +1,4 @@
+
 /* Variables */
 
 :root {
@@ -39,8 +40,8 @@ body {
 }
 
 img {
-max-width: 100%;
-height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -49,46 +50,46 @@ a {
 
 /**, *::before, *::after {
   box-sizing: border-box;
-}*/  /* Пока не применять*/
+  }*/  /* Пока не применять*/
 
-/*Скрытые заголовки и скрытые описания ссылок*/
+  /*Скрытые заголовки и скрытые описания ссылок*/
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
 
-/* Grid */
+  /* Grid */
 
-.page {
-  height: 100%;
-}
+  .page {
+    height: 100%;
+  }
 
-.page-body {
-  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
-  width: 1200px;
-  margin: 0 auto;
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  align-content: start;
-  background-color: var(--basic-white);
-  /*тень добавить*/
-}
-
-
-/*index.html*/
+  .page-body {
+    box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+    width: 1200px;
+    margin: 0 auto;
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    align-content: start;
+    background-color: var(--basic-white);
+    /*тень добавить*/
+  }
 
 
-/* Main header */
+  /*index.html*/
 
-.main-header {
+
+  /* Main header */
+
+  .main-header {
   /*outline: 5px solid rgba(0, 255, 0, 0.3);
   outline-offset: -5px;*/
 }
@@ -99,13 +100,14 @@ a {
   line-height: 26px;
   font-weight: 700;
   position: relative;
- }
+}
 
 /* Logo */
 
 .main-header-logo {
   position: absolute;
-  left: 531px;
+  left: 50%;
+  margin-left: -69px;
   top: 0;
   width: 138px;
   height: 70px;
@@ -119,14 +121,13 @@ a {
   margin: 0;
   padding: 0;
   min-height: 56px;
-  width: 1200px;
   /*outline: 5px solid rgba(0, 255, 255, 0.3);
   outline-offset: -5px;*/
   list-style: none;
 }
 
 .site-navigation li {
-  width: 400px;
+  width: 300px;
   padding-top: 16px;
 }
 
@@ -136,10 +137,12 @@ a {
 }
 
 .site-navigation li:nth-child(1) {
+  box-sizing: border-box;
   padding-left: 73px;
 }
 
 .site-navigation li:nth-child(4) {
+  box-sizing: border-box;
   padding-right: 73px;
 }
 
@@ -186,7 +189,7 @@ a {
   padding-top: 78px;
   background-color: var(--basic-light);
   background-image:  url("../img/svg/intro-mask.svg"),
-    url("../img/background-photo-1.jpg");
+  url("../img/background-photo-1.jpg");
   background-position: 0 452px, 0 0;
   background-repeat: no-repeat, no-repeat;
 }
@@ -229,9 +232,8 @@ ul.advantages-list {
 }
 
 ul.feature-list {
-  width: 1200px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 400px 400px 400px;
   /*column-gap: 121px;*/
   /*outline: 5px solid rgba(255, 0, 0, 0.3);
   outline-offset: -5px;*/
@@ -336,7 +338,7 @@ div.souvenir {
 }
 
 .advantages-item-2 p:nth-child(2) {
-    margin-bottom: 23px;
+  margin-bottom: 23px;
 }
 
 .advantages-item-1 {
@@ -438,7 +440,8 @@ div.souvenir {
   text-align: center;
   text-transform: uppercase;
   background-color: var(--basic-blue-light);
-  border: none;
+ /* outline: 5px solid rgba(0, 255, 0, 0.3);
+  outline-offset: -5px;*/
 }
 
 .button-blue:hover,
@@ -454,7 +457,8 @@ div.souvenir {
 
 .search-form {
   display: flex;
-  flex-direction: column;
+  /*flex-direction: column;*/
+  flex-wrap: wrap;
   box-sizing: border-box;
   width: 568px;
   background-color: var(--basic-white);
@@ -485,6 +489,8 @@ label.right {
 }
 
 div.input-date {
+  display: flex;
+
   box-sizing: border-box;
   width: 346px;
   margin-right: 55px;
@@ -505,7 +511,9 @@ div.final {
   box-sizing: border-box;
   padding: 0 0 0 13px;
   /*display: block;*/
-  width: 100%;
+  width: 308px;
+  /*outline: 5px solid rgba(0, 255, 0, 0.3);
+  outline-offset: -5px;*/
 }
 
 .input-date input,
@@ -521,6 +529,7 @@ div.final {
 }
 
 .search-item-full-width {
+  width: 568px;
   display: flex;
   align-items: baseline;
   /*outline: 5px solid rgba(0, 255, 0, 0.3);
@@ -533,14 +542,22 @@ div.final {
 }
 
 .search-item-full-width:nth-child(2) input {
-  margin-bottom: 30px;
+  /*margin-bottom: 30px;*/
 }
 
 .search-item-half-width {
   display: flex;
   align-items: baseline;
-  /*outline: 5px solid rgba(0, 255, 0, 0.3);
-  outline-offset: -5px;*/
+  outline: 5px solid rgba(0, 255, 0, 0.3);
+  outline-offset: -5px;
+}
+
+.search-item-half-width:nth-child(3) {
+  width: 281px;
+}
+
+.search-item-half-width:nth-child(4) {
+  width: 287px;
 }
 
 /*.input-date input:hover,
@@ -552,18 +569,35 @@ div.final {
 .input-quantity input:focus {
   background-color: transparent;
   border: 2px solid var(--basic-light-brown);
-}*/
+  }*/
 
-.calendar-icon {
-  background-image: url("../img/svg/calendar.svg");
-  background-position: center center;
-  background-repeat: no-repeat;
-} /*Иконка календаря поменяла цвет на черный*/
+  .calendar-icon {
+    border: transparent;
+    border-color: #f2f2f2;
+    box-shadow: none;
 
-/*Поле ввода с кнопками + и - объединить ?*/
+    width: 38px;
+    min-height: 38px;
+    margin-top: 55px;
+    margin-bottom: 29px;
+    border: none;
+    padding: 0;
+    /*outline: 5px solid rgba(0, 255, 0, 0.3);
+    outline-offset: -5px;*/
+    background-color: var(--basic-extra-light);
 
-/*Map*/
-.map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .calendar-icon-down {
+    margin: 0;
+    /*margin-bottom: 30px;*/
+  }
+
+  /*Map*/
+  .map {
   /*outline: 5px solid rgba(0, 255, 0, 0.3);
   outline-offset: -5px;*/
 }
@@ -572,7 +606,7 @@ div.final {
 
 .main-footer {
   display: flex;
-  justify-content: space-around;
+  /*justify-content: space-around;*/
   /*outline: 5px solid rgba(255, 0, 0, 0.7);
   outline-offset: -5px;*/
   background-color: rgba(255, 255, 255, 0.9);
@@ -585,6 +619,8 @@ footer.above-map {
 /*Footer-contacts*/
 
 .footer-contacts {
+  box-sizing: border-box;
+  width: 400px;
   padding: 23px 0 36px 0;
   /*outline: 5px solid rgba(0, 255, 255, 0.7);
   outline-offset: -5px;*/
@@ -606,6 +642,8 @@ footer.above-map {
 /*Footer-social*/
 
 .footer-social {
+  box-sizing: border-box;
+  width: 400px;
   /*outline: 5px solid rgba(0, 255, 0, 0.7);
   outline-offset: -5px;*/
 }
@@ -615,6 +653,7 @@ footer.above-map {
   height: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 0;
   margin: 0;
 }
@@ -668,7 +707,10 @@ a.social-button {
 /*Footer-copyright*/
 
 .footer-copyright {
+  box-sizing: border-box;
+  width: 400px;
   display: flex;
+  justify-content: center;
   align-items: center;
   margin: 0;
   /*outline: 5px solid rgba(255, 0, 255, 0.7);
@@ -686,7 +728,7 @@ a.social-button {
 }
 
 /*Замену цвета интерактивной картинки логотипа html-академии сделать,
- если успею(+<img> на <svg> для этого заменить)*/
+если успею(+<img> на <svg> для этого заменить)*/
 
 /*.footer-copyright a:hover,
 .footer-copyright a:focus {
@@ -695,41 +737,41 @@ a.social-button {
 
 .footer-copyright a:active {
   color: var(--special-blue-dark);
-}*/
+  }*/
 
 
-/*hotels.html*/
+  /*hotels.html*/
 
-/*filters*/
+  /*filters*/
 
-div.filters {
-  background-color: var(--basic-light);
-  background-image: url("../img/background-filter.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 1200px 217px;
-}
+  div.filters {
+    background-color: var(--basic-light);
+    background-image: url("../img/background-filter.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 1200px 217px;
+  }
 
-.filter legend {
-  font: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 21px;
-  color: var(--basic-white);
-}
+  .filter legend {
+    font: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--basic-white);
+  }
 
-.filter ul {
-  font: inherit;
-  list-style: none;
-  color: var(--basic-white);
-}
+  .filter ul {
+    font: inherit;
+    list-style: none;
+    color: var(--basic-white);
+  }
 
-div.price {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 21px;
-  color: var(--basic-white);
-}
+  div.price {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--basic-white);
+  }
 
 /*Стили для кнопки задам, когда пойму, как задавать размеры
 кнопкам: чтобы задать множественные классы всем кнопкам.*/
@@ -773,66 +815,66 @@ div.price {
 /*.breadcrumbs a:hover,
 .breadcrumbs a:focus {
   background-color:  ;
-}*/
+  }*/
 
-/*sort-list*/
+  /*sort-list*/
 
-.sort-list {
-  list-style: none;
-}
+  .sort-list {
+    list-style: none;
+  }
 
-/*Catalog*/
+  /*Catalog*/
 
-.catalog-list {
-  list-style: none;
-}
+  .catalog-list {
+    list-style: none;
+  }
 
-.catalog-item-image {
-  background-color: var(--basic-light);
-}
+  .catalog-item-image {
+    background-color: var(--basic-light);
+  }
 
-a.name-hotel {
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 26px;
-  color: var(--basic-black);
-}
+  a.name-hotel {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 26px;
+    color: var(--basic-black);
+  }
 
-a.name-hotel:hover,
-a.name-hotel:focus {
-  color: var(--basic-blue-light);
-}
+  a.name-hotel:hover,
+  a.name-hotel:focus {
+    color: var(--basic-blue-light);
+  }
 
-a.name-hotel:active {
-  color: var(--basic-black);
-  opacity: 0.3;
-}
+  a.name-hotel:active {
+    color: var(--basic-black);
+    opacity: 0.3;
+  }
 
-.rating div {
-  width: 90px;
-  height: 18px;
-  background-image: url("../img/svg/star.svg");
-  background-repeat: space no-repeat;
-  background-size: contain;
-}
+  .rating div {
+    width: 90px;
+    height: 18px;
+    background-image: url("../img/svg/star.svg");
+    background-repeat: space no-repeat;
+    background-size: contain;
+  }
 
-.rating .four-stars {
-  width: 90px;
-  height: 18px;
-}
+  .rating .four-stars {
+    width: 90px;
+    height: 18px;
+  }
 
-.rating .three-stars {
-  width: 65px;
-  height: 18px;
-}
+  .rating .three-stars {
+    width: 65px;
+    height: 18px;
+  }
 
-.rating .two-stars{
-  width: 41px;
-  height: 18px;
-}
+  .rating .two-stars{
+    width: 41px;
+    height: 18px;
+  }
 
-.rating p {
-  color: var(--basic-grey);
-  background-color: var(--basic-extra-light);
-}
+  .rating p {
+    color: var(--basic-grey);
+    background-color: var(--basic-extra-light);
+  }
