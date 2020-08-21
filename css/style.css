@@ -156,11 +156,12 @@ a {
   color: var(--basic-black);
 }
 
-.site-navigation a:hover[href] {
+.site-navigation a:hover[href],
+.site-navigation a:focus {
   color: var(--basic-blue-light);
 }
 
-.site-navigation a:focus {
+.site-navigation a:active {
   color: var(--basic-black);
   opacity: 0.3;
 }
@@ -188,10 +189,13 @@ a {
   text-align: center;
   padding-top: 78px;
   background-color: var(--basic-light);
-  background-image:  url("../img/svg/intro-mask.svg"),
+  /*background-image:  url("../img/svg/intro-mask.svg"),
   url("../img/background-photo-1.jpg");
   background-position: 0 452px, 0 0;
-  background-repeat: no-repeat, no-repeat;
+  background-repeat: no-repeat, no-repeat;*/
+  background-image: url("../img/background-photo-1_.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 /*Features*/
@@ -423,6 +427,7 @@ div.souvenir {
 
 .button-brown:active {
   background-color: var(--special-brown-dark);
+  color: #888888;
 }
 
 .button-blue {
@@ -441,7 +446,7 @@ div.souvenir {
   text-transform: uppercase;
   background-color: var(--basic-blue-light);
  /* outline: 5px solid rgba(0, 255, 0, 0.3);
-  outline-offset: -5px;*/
+ outline-offset: -5px;*/
 }
 
 .button-blue:hover,
@@ -451,6 +456,7 @@ div.souvenir {
 
 .button-blue:active {
   background-color: var(--special-blue-dark);
+  color: #888888;
 }
 
 /*form */
@@ -591,10 +597,20 @@ div.final {
     align-items: center;
   }
 
+  .calendar-icon:hover path,
+  .calendar-icon:focus path {
+    fill: #000000;
+  }
+
+  .calendar-icon:active path {
+    fill: #81B3D2;
+  }
+
   .calendar-icon-down {
     margin: 0;
     /*margin-bottom: 30px;*/
   }
+
 
   /*Map*/
   .map {
@@ -692,9 +708,6 @@ a.social-button {
   left: 13px;
 }
 
-/*Чтобы белые иконки отобразились - нужно отключить белый фон у
-.main-footer и body*/
-
 .social-button:hover,
 .social-button:focus {
   background-color: var(--special-blue);
@@ -702,6 +715,11 @@ a.social-button {
 
 .social-button:active {
   background-color: var(--special-blue-dark);
+}
+
+.social-button:active svg {
+  /*fill: #FFFFFF;*/
+  opacity: 0.3;
 }
 
 /*Footer-copyright*/
@@ -725,7 +743,20 @@ a.social-button {
   display: flex;
   align-items: center;
   margin-left: 8px;
+
+  width: 115px;
+  height: 41px;
 }
+
+.footer-copyright a:hover path,
+.footer-copyright a:focus path {
+  fill: #81B3D2;
+}
+
+.footer-copyright a:active path {
+  fill: #BDBBBC;
+}
+
 
 /*Замену цвета интерактивной картинки логотипа html-академии сделать,
 если успею(+<img> на <svg> для этого заменить)*/
@@ -745,11 +776,13 @@ a.social-button {
   /*filters*/
 
   div.filters {
+    min-height: 213px;
+    width: 100%;
     background-color: var(--basic-light);
     background-image: url("../img/background-filter.jpg");
-    background-position: center center;
+    background-position: 0 0;
     background-repeat: no-repeat;
-    background-size: 1200px 217px;
+    /*background-size: 1200px 217px;*/
   }
 
   .filter legend {
@@ -773,28 +806,116 @@ a.social-button {
     color: var(--basic-white);
   }
 
+  form.filter {
+    min-height: 213px;
+    /* width: 100%;*/
+    box-sizing: border-box;
+    width: 1200px;
+
+    display: flex;
+    padding-top: 30px;
+
+    outline: 5px solid rgba(255, 0, 0, 0.3);
+    outline-offset: -5px;
+  }
+
+  .filter fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    box-sizing: border-box;
+    width: 137px;
+  }
+
+  .filter fieldset:nth-child(1) {
+    margin-left: 72px;
+    margin-right: 117px;
+
+    outline: 5px solid rgba(0, 255, 255, 0.3);
+    outline-offset: -5px;
+  }
+
+  .filter fieldset:nth-child(2) {
+    margin-right: 348px;
+
+    outline: 5px solid rgba(0, 255, 255, 0.3);
+    outline-offset: -5px;
+  }
+
+  div.price-block {
+    box-sizing: border-box;
+    width: 317px;
+
+    outline: 5px solid rgba(0, 255, 255, 0.3);
+    outline-offset: -5px;
+  }
+
 /*Стили для кнопки задам, когда пойму, как задавать размеры
 кнопкам: чтобы задать множественные классы всем кнопкам.*/
 
 /*sort*/
 
+div.sort {
+
+ /* width: 100%;*/
+
+ box-sizing: border-box;
+ min-height: 90px;
+ width: 1200px;
+ display: flex;
+ /*align-items: baseline;*/
+ padding-top: 33px;
+ outline: 5px solid rgba(255, 0, 0, 0.3);
+ outline-offset: -5px;
+}
+
 .sort h2 {
+  margin: 0;
+
+  box-sizing: border-box;
+  width: 117px;
+  margin-left: 73px;
+  margin-right: 46px;
+
+
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
   color: var(--basic-black);
+  outline: 5px solid rgba(0, 255, 255, 0.3);
+  outline-offset: -5px;
 }
 
 .sort p {
+  margin: 0;
+
+  box-sizing: border-box;
+  width: 75px;
+  margin-right: 40px;
+
   font-size: 12px;
   line-height: 18px;
   color: var(--basic-black);
+  outline: 5px solid rgba(0, 255, 255, 0.3);
+  outline-offset: -5px;
 }
 
 /* Breadcrumbs */
 
 .breadcrumbs {
   list-style: none;
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  width: 239px;
+  margin-right: 503px;
+
+  display: flex;
+
+  outline: 5px solid rgba(0, 255, 255, 0.3);
+  outline-offset: -5px;
 }
 
 .breadcrumbs a {
@@ -811,6 +932,25 @@ a.social-button {
   border-bottom: none;
 }
 
+.breadcrumbs li {
+  outline: 5px solid rgba(255, 0, 0, 0.3);
+  outline-offset: -5px;
+}
+
+.breadcrumbs li:nth-child(1) {
+  width: 49px;
+  margin-right: 32px;
+}
+
+.breadcrumbs li:nth-child(2) {
+  width: 49px;
+  margin-right: 33px;
+}
+
+.breadcrumbs li:nth-child(3) {
+  width: 76px;
+}
+
 /*Сделать, если успею:*/
 /*.breadcrumbs a:hover,
 .breadcrumbs a:focus {
@@ -821,20 +961,61 @@ a.social-button {
 
   .sort-list {
     list-style: none;
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+    width: 34px;
+
+    display: flex;
+
+    outline: 5px solid rgba(0, 255, 255, 0.3);
+    outline-offset: -5px;
+  }
+
+  .sort-list li {
+    width: 11px;
+
+    outline: 5px solid rgba(255, 0, 0, 0.3);
+    outline-offset: -5px;
+  }
+
+  .sort-list li:nth-child(1) {
+    margin-right: 12px;
   }
 
   /*Catalog*/
 
   .catalog-list {
     list-style: none;
+
+    margin: 0;
+    padding: 0;
   }
+
+  .catalog-item {
+    outline: 5px solid rgba(255, 0, 0, 0.3);
+    outline-offset: -5px;
+  }
+
 
   .catalog-item-image {
     background-color: var(--basic-light);
+
+    margin: 0;
+
+    height: 90px;
   }
 
+.catalog-item-info h3 {
+  margin: 0;
+}
+
+.catalog-item-info p {
+  margin: 0;
+}
+
   a.name-hotel {
-    text-decoration: none;
     font-weight: 700;
     font-size: 21px;
     line-height: 26px;
@@ -877,4 +1058,6 @@ a.social-button {
   .rating p {
     color: var(--basic-grey);
     background-color: var(--basic-extra-light);
+
+    margin: 0;
   }
