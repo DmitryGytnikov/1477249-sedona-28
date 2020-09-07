@@ -378,7 +378,7 @@ div.souvenir {
 
 .search {
   position: relative;
-  background-color:
+  /*background-color:*/
 }
 
 .title-search {
@@ -812,6 +812,61 @@ div.filters {
   color: var(--basic-white);
 }
 
+.filter-checkbox label {
+  padding-left: 40px;
+}
+
+.filter-option label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none; /*отменяем выделение текста подписи цветом*/
+}
+
+.filter-option label::before {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  left: 0px;
+  top: 0px;
+  width: 23px;
+  height: 23px;
+  /*border: 2px solid #FFFFFF;
+  border-radius: 4px;*/
+  background-image: url("../img/svg/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 27px;
+  height: 23px;
+  background-image: url("../img/svg/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-checkbox:checked + label::before {
+  display: none;
+}
+
+.filter-input-checkbox:disabled + label::before {
+  background-image: url("../img/svg/checkbox-off-disabled.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-checkbox:checked:disabled + label::after {
+  background-image: url("../img/svg/checkbox-on-disabled.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+
 div.price {
   margin-bottom: 17px;
 
@@ -878,8 +933,8 @@ form.filter {
   padding-top: 30px;
   padding-bottom: 27px;
 
-  outline: 5px solid rgba(255, 0, 0, 0.3);
-  outline-offset: -5px;
+  /*outline: 5px solid rgba(255, 0, 0, 0.3);
+  outline-offset: -5px;*/
 }
 
 .filter fieldset {
@@ -895,23 +950,23 @@ form.filter {
   margin-left: 72px;
   margin-right: 117px;
 
-  outline: 5px solid rgba(0, 255, 255, 0.3);
-  outline-offset: -5px;
+  /*outline: 5px solid rgba(0, 255, 255, 0.3);
+  outline-offset: -5px;*/
 }
 
 .filter fieldset:nth-child(2) {
   margin-right: 348px;
 
-  outline: 5px solid rgba(0, 255, 255, 0.3);
-  outline-offset: -5px;
+  /*outline: 5px solid rgba(0, 255, 255, 0.3);
+  outline-offset: -5px;*/
 }
 
 li.filter-checkbox {
   min-height: 23px;
   margin-top: 21px;
 
-  outline: 5px solid rgba(255, 0, 0, 0.3);
-  outline-offset: -5px;
+  /*outline: 5px solid rgba(255, 0, 0, 0.3);
+  outline-offset: -5px;*/
 }
 
 div.price-block {
@@ -1282,4 +1337,8 @@ a.name-hotel:active {
   text-align: center;
   /*outline: 5px solid rgba(20, 0, 255, 0.3);
   outline-offset: -5px;*/
+}
+
+.map iframe {
+  border:0;
 }
