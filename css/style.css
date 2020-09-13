@@ -651,6 +651,7 @@ footer.above-map {
   margin-top: -120px;
 }
 
+
 /*Footer-contacts*/
 
 .footer-contacts {
@@ -1048,6 +1049,10 @@ div.sort {
   outline-offset: -5px;*/
 }
 
+.breadcrumbs li {
+  line-height: 0;
+}
+
 .breadcrumbs a {
   font: inherit;
   font-size: 12px;
@@ -1110,6 +1115,7 @@ div.sort {
 
   .sort-list li {
     width: 11px;
+    line-height: 0;
 
     /*outline: 5px solid rgba(255, 0, 0, 0.3);
     outline-offset: -5px;*/
@@ -1147,10 +1153,15 @@ div.sort {
     width: 1200px;
     display: flex;
 
+    border-top: 1px solid #E5E5E5;
+
     /*outline: 5px solid rgba(255, 0, 0, 0.3);
     outline-offset: -5px;*/
   }
 
+  .catalog-item:last-child {
+    border-bottom: 1px solid #E5E5E5;
+  }
 
   .catalog-item-image {
     box-sizing: border-box;
