@@ -42,7 +42,7 @@ body {
 img {
   max-width: 100%;
   height: auto;
-}
+ }
 
 a {
   text-decoration: none;
@@ -687,6 +687,7 @@ footer.above-map {
   list-style: none;
   height: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   padding: 0;
@@ -858,14 +859,19 @@ div.filters {
   background-image: url("../img/svg/checkbox-off-disabled.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  cursor: default;
 }
 
 .filter-input-checkbox:checked:disabled + label::after {
   background-image: url("../img/svg/checkbox-on-disabled.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  cursor: default;
 }
 
+.filter-input-checkbox:disabled + label {
+  cursor: default;
+}
 
 div.price {
   margin-bottom: 17px;
@@ -1160,6 +1166,11 @@ div.sort {
     outline-offset: -5px;*/
   }
 
+.catalog-item-image img {
+   object-fit: contain; /*Элемент масштабируется, чтобы целиком уместиться в заданные размеры с соблюдением пропорций*/
+}
+
+
   .catalog-item-info {
     box-sizing: border-box;
     width: 258px;
@@ -1341,4 +1352,8 @@ a.name-hotel:active {
 
 .map iframe {
   border:0;
+}
+
+.hide {
+  display: none;
 }
