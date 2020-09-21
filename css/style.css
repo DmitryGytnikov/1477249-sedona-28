@@ -645,6 +645,7 @@ div.final {
   /*outline: 5px solid rgba(255, 0, 0, 0.7);
   outline-offset: -5px;*/
   background-color: rgba(255, 255, 255, 0.9);
+  z-index: 2;
 }
 
 footer.above-map {
