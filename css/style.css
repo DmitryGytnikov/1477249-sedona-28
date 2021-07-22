@@ -888,15 +888,10 @@ div.price-block {
   width: 317px;
 }
 
-
-
-
-
-
 /* Двойной ползунок */
 
 .filters-wrapper-right {
-*/  display: flex;
+  display: flex;
   flex-direction: column;
   padding: 0;
   width: 317px;
