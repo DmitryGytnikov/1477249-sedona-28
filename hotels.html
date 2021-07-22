@@ -16,8 +16,8 @@
           <img src="img/svg/logo-sedona.svg" width="138" height="70" alt="Логотип Sity of Sedona">
         </a>
         <ul class="site-navigation">
-          <li><a href="blank.html">Информация</a></li>
-          <li><a href="blank.html">Фото и видео</a></li>
+          <li><a href="hotels.html">Информация</a></li>
+          <li><a href="hotels.html">Фото и видео</a></li>
           <li><a href="blank.html">Карта штата</a></li>
           <li><a title="Вы уже на этой странице">Гостиницы</a></li>
         </ul>
@@ -29,7 +29,7 @@
         <h2 class="visually-hidden">Фильтр гостиниц</h2>
         <div class="filters">
           <form class="filter" action="https://echo.htmlacademy.ru" method="get">
-            <fieldset>
+            <fieldset class="fieldset-left">
               <legend>Инфраструктура:</legend>
               <ul>
                 <li class="filter-option filter-checkbox">
@@ -46,7 +46,7 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset>
+            <fieldset class="fieldset-middle">
               <legend>Тип жилья:</legend>
               <ul>
                 <li class="filter-option filter-checkbox">
@@ -63,15 +63,48 @@
                 </li>
               </ul>
             </fieldset>
-            <div class="price-block">
+
+
+
+          <div class="filters-wrapper-right">
+            <fieldset class="filters-group">
+              <legend class="filters-cost-per-day">
+                Стоимость в сутки, &#8381;:
+              </legend>
+              <div class="filter">
+                <div class="filter-interval">
+                  <label aria-label="Стоимость в сутки от">От <input type="text" name="min-interval"
+                      value="0" /></label>
+                  <label aria-label="Стоимость в сутки до">До <input type="text" name="max-interval"
+                      value="3000" /></label>
+                </div>
+                <div class="filter-range-wrapper">
+                  <div class="filter-range">
+                    <div class="filter-range-scale">
+                      <div class="filter-range-bar"></div>
+                    </div>
+                    <button aria-label="минимальное значение" type="button" class="filter-range-handle min"></button>
+                    <button aria-label="максимальное значение" type="button" class="filter-range-handle max"></button>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <button class="button-transparent" type="submit">Показать</button>
+          </div>
+
+
+           <!--  <div class="price-block">
               <div class="price">
                 <p>Стоимость в сутки (р):</p>
                 <div>
                   <img src="img/group.png" width="317" height="73" alt="Ползунок">
                 </div>
               </div>
+
               <button class="button-transparent" type="submit">Показать</button>
-            </div>
+            </div> -->
+
+
           </form>
         </div>
         <div class="sort">
