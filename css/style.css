@@ -48,6 +48,10 @@ a {
   text-decoration: none;
 }
 
+**, *::before, *::after {
+  transition: all 0.3s ease;
+}
+
 /**, *::before, *::after {
   box-sizing: border-box;
   }*/  /* Пока не применять*/
@@ -243,6 +247,14 @@ div.blue-background {
   padding-top: 50px;
   width: 400px;
   background-color: var(--basic-blue-light);
+  transition: all 0.5s ease;
+}
+
+div.blue-background:hover {
+  position: relative;
+  z-index: 2;
+  transform: scale(1.2, 1.2);
+  opacity: 0.9;
 }
 
 .blue-background h3 {
@@ -253,6 +265,15 @@ div.blue-background {
   font-weight: 700;
   font-size: 21px;
   color: var(--basic-white);
+  transition: all 0.5s ease;
+}
+
+.blue-background h3:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.blue-background h3:last-child:hover {
+  color: red;
 }
 
 .blue-background p {
@@ -274,6 +295,11 @@ div.housing {
   background-image: url("../img/svg/icon-1.svg");
   background-position: center center;
   background-repeat: no-repeat;
+  transition: all 0.5s ease;
+}
+
+div.housing:hover {
+  transform: scale(-1.1, 1.1);
 }
 
 div.meal {
@@ -284,6 +310,12 @@ div.meal {
   background-image: url("../img/svg/icon-3.svg");
   background-position: center center;
   background-repeat: no-repeat;
+  background-size: 75px 70px;
+  transition: all 0.5s ease;
+}
+
+div.meal:hover {
+  transform: rotate(-360deg);
 }
 
 div.souvenir {
@@ -293,6 +325,11 @@ div.souvenir {
   background-image: url("../img/svg/icon-2.svg");
   background-position: center center;
   background-repeat: no-repeat;
+  transition: all 0.5s ease;
+}
+
+div.souvenir:hover {
+  transform: scale(-1.1, 1.1);
 }
 
 .feature-item h4 {
@@ -313,6 +350,12 @@ div.souvenir {
 .feature-item {
   padding-top: 55px;
   min-height: 275px;
+}
+
+.feature-item a {
+  display: block;
+  width: 75px;
+  margin: 0 auto;
 }
 
 .advantages-item-2 h3 {
@@ -339,9 +382,31 @@ div.souvenir {
   display: flex;
 }
 
-.advantages-item-1-with-feature{
+.advantages-item-1 img {
+  transition: all 0.5s ease;
+  display: inline-block;
+}
+
+.advantages-item-1 img:hover {
+  position: relative;
+  z-index: 2;
+  opacity: 0/9;
+  transform: scale(1.1, 1.1) translate(37px, 0px);
+}
+
+.advantages-item-1-with-feature {
   display: flex;
   flex-wrap: wrap;
+}
+
+.advantages-item-1-with-feature img {
+  transition: all 0.5s ease;
+  display: inline-block;
+}
+
+.advantages-item-1-with-feature img:hover {
+  opacity: 0.9;
+  transform: scale(1.1, 1.1) translate(-36px, 0px);
 }
 
 .advantages-item-2 {
